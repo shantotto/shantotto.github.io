@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>http://shantotto.github.io/blog/2014/08/17/parallels-activation/</loc>
+    <lastmod>2014-08-17T21:25:19+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://shantotto.github.io/blog/2014/08/16/intel-power-gadget/</loc>
+    <lastmod>2014-08-16T16:02:47+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://shantotto.github.io/blog/2014/08/13/symfony2-setup/</loc>
+    <lastmod>2014-08-13T12:21:16+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://shantotto.github.io/blog/2014/08/13/mac-setup/</loc>
+    <lastmod>2014-08-13T02:19:12+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://shantotto.github.io/blog/2014/08/12/first-page/</loc>
+    <lastmod>2014-08-12T23:52:03+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://shantotto.github.io/blog/archives/</loc>
+    <lastmod>2014-08-17T23:30:23+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://shantotto.github.io/</loc>
+    <lastmod>2014-08-17T23:30:23+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+</urlset>
