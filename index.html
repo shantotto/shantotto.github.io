@@ -117,6 +117,113 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-24T22:52:20+09:00"  data-updated="true" itemprop="datePublished dateCreated">2014/08/24</time>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2014/08/24/get-all-entities/" itemprop="url">Doctrine管轄のエンティティ一覧を取得する</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>Entityの一覧を取得する方法が分からなくて調べたのでメモ。<br/>
+もっとスマートなやり方があるのかしらん。</p>
+
+<pre><code>$em = $this-&gt;getManater();
+$metadata_array = $em-&gt;getMetadataFactory()-&gt;getAllMetadata();
+foreach($metadata_array as $metadata){
+  $entity_name = $metadata-&gt;getName();
+}
+</code></pre>
+
+<p>これでエンティティ名が取れる。あとは、ロードを行うのであれば普通に</p>
+
+<pre><code>$em-&gt;getRepoisitory($entity_name)-&gt;findAll();
+</code></pre>
+
+<p>とか、</p>
+
+<pre><code> $refl_class = new ReflectionClass($entity_name);
+ $entity = $refl_class-&gt;newInstance();
+</code></pre>
+
+<p>とか色々できる。</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-24T03:26:08+09:00"  data-updated="true" itemprop="datePublished dateCreated">2014/08/24</time>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2014/08/24/symfony2-cache-clear/" itemprop="url">symfony2のキャッシュクリアができなくなった</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>普段の開発はMacbookProでコーディング→Linuxサーバにデプロイ、<br/>
+という流れでやっているのだけど、ある日突然<br/>
+ php app/console cache:clear &ndash;env=prod
+これがエラーで失敗するようになった。</p>
+
+<p>Linuxサーバで出たエラーの内容を見てみると、/Users/(中略)/app/cache/prod/appProdProjectContainer.php<br/>
+にアクセスできないと出てるけど…これMac環境のパスじゃん。</p>
+
+<p>なんでこんなパスを見に行くようになってしまったかは分かってないのだけれども、
+app/cache/prod/appProdProjectContainer.php というファイルは自動生成されるファイルなので
+さくっと削除して再度キャッシュクリアを実行。今度は成功。</p>
+
+<p>しかし問題が解決したとはいえ、根本原因がわからないままで気持ち悪い。</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-17T21:25:19+09:00"  data-updated="true" itemprop="datePublished dateCreated">2014/08/17</time>
         
       </p>
@@ -464,7 +571,7 @@ pear install phing/phing
       
         <section>
   <h1>About Me</h1>
-  <p>A little something about me.</p>
+  <p>ゲーム業界の片隅でサーバプログラマやってます。</p>
 </section>
 <section class="panel panel-default">
   <div class="panel-heading">
@@ -473,21 +580,21 @@ pear install phing/phing
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2014/08/24/get-all-entities/">Doctrine管轄のエンティティ一覧を取得する</a>
+    
+    <a class="list-group-item " href="/blog/2014/08/24/symfony2-cache-clear/">symfony2のキャッシュクリアができなくなった</a>
+    
     <a class="list-group-item " href="/blog/2014/08/17/parallels-activation/">Parallels Desktopのアクティベーションができない！</a>
     
     <a class="list-group-item " href="/blog/2014/08/16/intel-power-gadget/">Intel Power Gadget</a>
     
     <a class="list-group-item " href="/blog/2014/08/13/symfony2-setup/">symfony2の開発環境を作る</a>
     
-    <a class="list-group-item " href="/blog/2014/08/13/mac-setup/">macのセットアップ</a>
-    
-    <a class="list-group-item " href="/blog/2014/08/12/first-page/">開設</a>
-    
   </div>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/mac/'>mac (4)</a></li><li><a href='/blog/categories/php/'>php (1)</a></li><li><a href='/blog/categories/symfony2/'>symfony2 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/mac/'>mac (4)</a></li><li><a href='/blog/categories/php/'>php (3)</a></li><li><a href='/blog/categories/symfony2/'>symfony2 (3)</a></li></ul>
 </section>
 
       
